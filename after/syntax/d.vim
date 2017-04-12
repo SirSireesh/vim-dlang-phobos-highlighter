@@ -368,6 +368,44 @@ syntax keyword dSTLfunction daysToDayOfWeek
 syntax keyword dSTLfunction monthsToMonth
 "std.demangle
 syntax keyword dSTLfunction demangle
+"std.encoding
+syntax keyword dSTLenum INVALID_SEQUENCE
+syntax keyword dSTLenum AsciiChar
+syntax keyword dSTLenum Latin1Char
+syntax keyword dSTLenum Latin1String
+syntax keyword dSTLenum Latin2Char
+syntax keyword dSTLenum Latin2String
+syntax keyword dSTLenum Windows1250Char
+syntax keyword dSTLenum Windows1250String
+syntax keyword dSTLenum Windows1252Char
+syntax keyword dSTLenum Windows1252String
+syntax keyword dSTLenum BOM
+syntax keyword dSTLenum utfBOM 
+syntax keyword dSTLtype EncodingSchemeASCII
+syntax keyword dSTLtype EncodingSchemeLatin1
+syntax keyword dSTLtype EncodingSchemeLatin2
+syntax keyword dSTLtype EncodingSchemeWindows1250
+syntax keyword dSTLtype EncodingSchemeWindows1252
+syntax keyword dSTLtype EncodingSchemeUtf8
+syntax keyword dSTLtype EncodingSchemeUtf16Native
+syntax keyword dSTLtype EncodingSchemeUtf32Native 
+syntax keyword dSTLconstant bomTable 
+syntax keyword dSTLfunction getBOM
+syntax keyword dSTLfunction isValidCodePoint
+syntax keyword dSTLfunction encodingName
+syntax keyword dSTLfunction canEncode
+syntax keyword dSTLfunction isValidCodeUnit
+syntax keyword dSTLfunction isValid
+syntax keyword dSTLfunction validLength
+syntax keyword dSTLfunction sanitize
+syntax keyword dSTLfunction firstSequence
+syntax keyword dSTLfunction lastSequence
+syntax keyword dSTLfunction index
+syntax keyword dSTLfunction decodeReverse
+syntax keyword dSTLfunction safeDecode
+syntax keyword dSTLfunction encodedLength
+syntax keyword dSTLfunction codePoints
+syntax keyword dSTLfunction transcode
 "std.file
 syntax keyword dSTLfunction exists
 syntax keyword dSTLfunction isDir
