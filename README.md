@@ -1,4 +1,4 @@
-vim.cpp - additional vim c++ syntax highlighting
+vim.cpp - additional vim d syntax highlighting
 ------------------------------------------------
 
 This file contains additional syntax highlighting that used for D
@@ -6,7 +6,7 @@ development in Vim. Compared to the standard syntax highlighting for D it
 adds highlighting of (user defined) functions and the containers and types in
 the standard library (phobos).
 
-Development is done at: http://github.com/Sirsireesh/vim-dlang-enhanced-highlight
+Development is done at: http://github.com/Sirsireesh/vim-dlang-extra-highlight
 
 Optional features
 -----------------
