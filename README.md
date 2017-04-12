@@ -1,4 +1,4 @@
-vim.cpp - additional vim c++ syntax highlighting
+vim.cpp - additional vim d syntax highlighting
 ------------------------------------------------
 
 This file contains additional syntax highlighting that used for D
