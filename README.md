@@ -58,6 +58,7 @@ let c_no_curly_error=1
 Background information
 ----------------------
 
+Based heavily on [vim-cpp-enhanced-highlight by octol](https://github.com/octol/vim-cpp-enhanced-highlight), mostly copied from there
 - http://stackoverflow.com/questions/736701/class-function-names-highlighting-in-vim
 - http://www.vim.org/scripts/script.php?script_id=4293
 - http://www.vim.org/scripts/script.php?script_id=2224
