@@ -165,6 +165,8 @@ syntax keyword dPhobosFunction stripRight
 syntax keyword dPhobosFunction swap
 syntax keyword dPhobosFunction swapRanges
 syntax keyword dPhobosFunction uninitializedFill
+syntax keyword dPhobosBool OpenRight
+syntax keyword dPhobosBool SortOutput
 "std.array
 syntax keyword dPhobosFunction array
 syntax keyword dPhobosFunction appender
@@ -252,6 +254,40 @@ syntax keyword dPhobosType DList
 syntax keyword dPhobosType RedBlackTree
 syntax keyword dPhobosType SList
 syntax keyword dPhobosType RefAppender
+syntax keyword dPhobosFunction make
+syntax keyword dPhobosFunction removeAny
+syntax keyword dPhobosFunction stableRemoveAny
+syntax keyword dPhobosFunction insertBack
+syntax keyword dPhobosFunction stableInsertBack
+syntax keyword dPhobosFunction removeBack
+syntax keyword dPhobosFunction stableRemoveBack
+syntax keyword dPhobosFunction insertBefore
+syntax keyword dPhobosFunction insertAfter
+syntax keyword dPhobosFunction insert
+syntax keyword dPhobosFunction stableInsert
+syntax keyword dPhobosFunction linearRemove
+syntax keyword dPhobosFunction linearInsert
+syntax keyword dPhobosFunction stableLinearInsert
+syntax keyword dPhobosFunction acquire
+syntax keyword dPhobosFunction assume
+syntax keyword dPhobosFunction release
+syntax keyword dPhobosFunction replaceFront
+syntax keyword dPhobosFunction conditionalInsert
+syntax keyword dPhobosFunction conditionalSwap
+syntax keyword dPhobosFunction heapify
+syntax keyword dPhobosFunction insertFront
+syntax keyword dPhobosFunction stableInsertFront
+syntax keyword dPhobosFunction stableInsertBefore
+syntax keyword dPhobosFunction stableInsertAfter
+syntax keyword dPhobosFunction stableRemoveFront
+syntax keyword dPhobosFunction stableLinearRemove
+syntax keyword dPhobosType ConstRange
+syntax keyword dPhobosType Range
+syntax keyword dPhobosFunction removeKey
+syntax keyword dPhobosFunction upperBound
+syntax keyword dPhobosFunction lowerBound
+syntax keyword dPhobosFunction equalRange
+syntax keyword dPhobosFunction redBlackTree
 "std.complex
 syntax keyword dPhobosType Complex
 syntax keyword dPhobosFunction arg
@@ -313,11 +349,15 @@ syntax keyword dPhobosEnum Malformed
 syntax keyword dPhobosFunction csvNextToken
 syntax keyword dPhobosFunction csvReader
 "std.datetime
+syntax keyword dPhobosBool AllowDayOverflow
+syntax keyword dPhobosBool PopFirst
+syntax keyword dPhobosBool AutoStart
 syntax keyword dPhobosType SysTime
 syntax keyword dPhobosType Date
 syntax keyword dPhobosType TimeOfDay
 syntax keyword dPhobosType DateTime
 syntax keyword dPhobosType FormatSpec
+syntax keyword dPhobosType Clock
 syntax keyword dPhobosEnum LetterCase
 syntax keyword dPhobosEnum Month
 syntax keyword dPhobosEnum DayOfWeek
@@ -370,15 +410,16 @@ syntax keyword dPhobosFunction monthsToMonth
 syntax keyword dPhobosFunction demangle
 "std.encoding
 syntax keyword dPhobosEnum INVALID_SEQUENCE
-syntax keyword dPhobosEnum AsciiChar
-syntax keyword dPhobosEnum Latin1Char
-syntax keyword dPhobosEnum Latin1String
-syntax keyword dPhobosEnum Latin2Char
-syntax keyword dPhobosEnum Latin2String
-syntax keyword dPhobosEnum Windows1250Char
-syntax keyword dPhobosEnum Windows1250String
-syntax keyword dPhobosEnum Windows1252Char
-syntax keyword dPhobosEnum Windows1252String
+syntax keyword dPhobosType AsciiChar
+syntax keyword dPhobosType AsciiString
+syntax keyword dPhobosType Latin1Char
+syntax keyword dPhobosType Latin1String
+syntax keyword dPhobostype Latin2Char
+syntax keyword dPhobosType Latin2String
+syntax keyword dPhobosType Windows1250Char
+syntax keyword dPhobosType Windows1250String
+syntax keyword dPhobosType Windows1252Char
+syntax keyword dPhobostype Windows1252String
 syntax keyword dPhobosEnum BOM
 syntax keyword dPhobosEnum utfBOM
 syntax keyword dPhobosType EncodingSchemeASCII
@@ -541,6 +582,19 @@ syntax keyword dPhobosFunction sgn
 syntax keyword dPhobosFunction copysign
 syntax keyword dPhobosFunction isPowerOf2
 syntax keyword dPhobosFunction conj
+syntax keyword dPhobosFunction inexact
+syntax keyword dPhobosFunction underflow
+syntax keyword dPhobosFunction overflow
+syntax keyword dPhobosFunction divByZero
+syntax keyword dPhobosFunction invalid
+syntax keyword dPhobosFunction resetIeeeFlags
+syntax keyword dPhobosFunction ieeeFlags
+syntax keyword dPhobosFunction severeExceptions
+syntax keyword dPhobosFunction hasExceptionTraps
+syntax keyword dPhobosFunction enableExceptions
+syntax keyword dPhobosFunction disableExceptions
+syntax keyword dPhobosFunction rounding
+syntax keyword dPhobosFunction enabledExceptions
 "std.meta
 syntax keyword dPhobosFunction Alias
 syntax keyword dPhobosFunction AliasSeq
@@ -624,13 +678,14 @@ syntax keyword dPhobosType intmax_t
 syntax keyword dPhobosType uintmax_t
 syntax keyword dPhobosType BitRange
 "std.stdio
+syntax keyword dPhobosBool KeepTerminator
 syntax keyword dPhobosType File
 syntax keyword dPhobosType lines
 syntax keyword dPhobosConstant stdin
 syntax keyword dPhobosConstant stdout
 syntax keyword dPhobosConstant stderr
 syntax keyword dPhobosConstant openNetwork
-syntax keyword dPhobosEnum	LockType
+syntax keyword dPhobosEnum LockType
 syntax keyword dPhobosFunction open
 syntax keyword dPhobosFunction reopen
 syntax keyword dPhobosFunction popen
