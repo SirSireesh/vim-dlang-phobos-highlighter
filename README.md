@@ -1,4 +1,4 @@
-vim.cpp - additional vim d syntax highlighting
+vim.d - additional vim d syntax highlighting
 ------------------------------------------------
 
 This file contains additional syntax highlighting that used for D
@@ -37,8 +37,8 @@ git submodule add https://github.com/Sirsireesh/vim-dlang-extra-highlight.git bu
 ```
 
 #### Manual installation
-If you don't have either Vundle or Pathogen installed, copy the cpp.vim file
-(optionally also c.vim) to .vim/after/syntax.
+If you don't have either Vundle or Pathogen installed, copy the d.vim file
+to .vim/after/syntax.
 ```sh
 git clone https://github.com/Sirsireesh/vim-dlang-extra-highlight.git /tmp/vim-dlang-extra-highlight
 mkdir -p ~/.vim/after/syntax/
