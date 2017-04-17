@@ -63,7 +63,7 @@ syntax keyword dPhobosNamespace std
 syntax keyword dPhobosNamespace etc
 syntax keyword dPhobosNamespace core
 
-"std.algorithm
+" std.algorithm
 syntax keyword dPhobosFunction all
 syntax keyword dPhobosFunction any
 syntax keyword dPhobosFunction balancedParens
@@ -167,7 +167,7 @@ syntax keyword dPhobosFunction swapRanges
 syntax keyword dPhobosFunction uninitializedFill
 syntax keyword dPhobosBool OpenRight
 syntax keyword dPhobosBool SortOutput
-"std.array
+" std.array
 syntax keyword dPhobosFunction array
 syntax keyword dPhobosFunction appender
 syntax keyword dPhobosFunction assocArray
@@ -188,7 +188,7 @@ syntax keyword dPhobosFunction sameHead
 syntax keyword dPhobosFunction sameTail
 syntax keyword dPhobosFunction split
 syntax keyword dPhobosFunction uninitializedArray
-"std.ascii
+" std.ascii
 syntax keyword dPhobosConstant digits
 syntax keyword dPhobosConstant fullHexDigits
 syntax keyword dPhobosConstant hexDigits
@@ -213,7 +213,7 @@ syntax keyword dPhobosFunction isUpper
 syntax keyword dPhobosFunction isWhite
 syntax keyword dPhobosFunction toLower
 syntax keyword dPhobosFunction toUpper
-"std.base64
+" std.base64
 syntax keyword dPhobosType Encoder
 syntax keyword dPhobosType Decoder
 syntax keyword dPhobosEnum NoPadding
@@ -223,7 +223,8 @@ syntax keyword dPhobosFunction decodeLength
 syntax keyword dPhobosFunction decode
 syntax keyword dPhobosFunction encoder
 syntax keyword dPhobosFunction decoder
-"std.bigint
+syntax keyword dPhobosException Base64Exception
+" std.bigint
 syntax keyword dPhobosType BigInt
 syntax keyword dPhobosFunction toLong
 syntax keyword dPhobosFunction toInt
@@ -232,7 +233,7 @@ syntax keyword dPhobosFunction ulongLength
 syntax keyword dPhobosFunction toDecimalString
 syntax keyword dPhobosFunction toHex
 syntax keyword dPhobosFunction absUnsign
-"std.bitmanip
+" std.bitmanip
 syntax keyword dPhobosType FloatRep
 syntax keyword dPhobosType DoubleRep
 syntax keyword dPhobosType BitArray
@@ -247,7 +248,7 @@ syntax keyword dPhobosFunction peek
 syntax keyword dPhobosFunction read
 syntax keyword dPhobosFunction taggedClassRef
 syntax keyword dPhobosFunction taggedPointer
-"std.containers
+" std.containers
 syntax keyword dPhobosType Array
 syntax keyword dPhobosType BinaryHeap
 syntax keyword dPhobosType DList
@@ -288,14 +289,14 @@ syntax keyword dPhobosFunction upperBound
 syntax keyword dPhobosFunction lowerBound
 syntax keyword dPhobosFunction equalRange
 syntax keyword dPhobosFunction redBlackTree
-"std.complex
+" std.complex
 syntax keyword dPhobosType Complex
 syntax keyword dPhobosFunction arg
 syntax keyword dPhobosFunction complex
 syntax keyword dPhobosFunction conj
 syntax keyword dPhobosFunction fromPolar
 syntax keyword dPhobosFunction sqAbs
-"std.concurrency
+" std.concurrency
 syntax keyword dPhobosType Tid
 syntax keyword dPhobosType ThreadInfo
 syntax keyword dPhobosType ThreadScheduler
@@ -323,14 +324,20 @@ syntax keyword dPhobosFunction spawnLinked
 syntax keyword dPhobosFunction thisTid
 syntax keyword dPhobosFunction unregister
 syntax keyword dPhobosFunction yield
-"std.compiler
+syntax keyword dPhobosException MessageMismatch
+syntax keyword dPhobosException OwnerTerminated
+syntax keyword dPhobosException LinkTerminated
+syntax keyword dPhobosException PriorityMessageException
+syntax keyword dPhobosException MailboxFull
+syntax keyword dPhobosException TidMissingException
+" std.compiler
 syntax keyword dPhobosConstant name
 syntax keyword dPhobosConstant vendor
 syntax keyword dPhobosConstant version_major
 syntax keyword dPhobosConstant version_minor
 syntax keyword dPhobosConstant D_major
 syntax keyword dPhobosEnum Vendor
-"std.conv
+" std.conv
 syntax keyword dPhobosFunction castFrom
 syntax keyword dPhobosFunction emplace
 syntax keyword dPhobosFunction parse
@@ -344,11 +351,16 @@ syntax keyword dPhobosFunction octal
 syntax keyword dPhobosFunction roundTo
 syntax keyword dPhobosFunction signed
 syntax keyword dPhobosFunction unsigned
-"std.csv
+syntax keyword dPhobosException ConvException
+syntax keyword dPhobosException ConvOverflowException
+" std.csv
 syntax keyword dPhobosEnum Malformed
 syntax keyword dPhobosFunction csvNextToken
 syntax keyword dPhobosFunction csvReader
-"std.datetime
+syntax keyword dPhobosException CSVException
+syntax keyword dPhobosException HeaderMismatchException
+syntax keyword dPhobosException IncompleteCellException
+" std.datetime
 syntax keyword dPhobosBool AllowDayOverflow
 syntax keyword dPhobosBool PopFirst
 syntax keyword dPhobosBool AutoStart
@@ -405,9 +417,10 @@ syntax keyword dPhobosFunction fromSimpleString
 syntax keyword dPhobosFunction measureTime
 syntax keyword dPhobosFunction daysToDayOfWeek
 syntax keyword dPhobosFunction monthsToMonth
-"std.demangle
+syntax keyword dPhobosException DateTimeException
+" std.demangle
 syntax keyword dPhobosFunction demangle
-"std.digest.crc
+" std.digest.crc
 syntax keyword dPhobosType CRC32
 syntax keyword dPhobosFunction put
 syntax keyword dPhobosFunction finish
@@ -415,7 +428,7 @@ syntax keyword dPhobosFunction crc32Of
 syntax keyword dPhobosFunction crcHexString
 syntax keyword dPhobosType CRC32Digest
 syntax keyword dPhobosType ExampleDigest
-"std.digest.digest
+" std.digest.digest
 syntax keyword dPhobosFunction isDigest
 syntax keyword dPhobosFunction DigestType
 syntax keyword dPhobosFunction hasPeek
@@ -428,13 +441,13 @@ syntax keyword dPhobosFunction reset
 syntax keyword dPhobosEnum Order
 syntax keyword dPhobosFunction toHexString
 syntax keyword dPhobosType WrapperDigest
-"std.digest.hmac
+" std.digest.hmac
 syntax keyword dPhobosType HMAC
-"std.digest.md
+" std.digest.md
 syntax keyword dPhobosType MD5
 syntax keyword dPhobosFunction md5Of
 syntax keyword dPhobosType MD5Digest
-"std.digest.murmur
+" std.digest.murmur
 syntax keyword dPhobosType MurmurHash3
 syntax keyword dPhobosType Element
 syntax keyword dPhobosFunction putElement
@@ -443,11 +456,11 @@ syntax keyword dPhobosFunction finalize
 syntax keyword dPhobosFunction get
 syntax keyword dPhobosFunction getBytes
 syntax keyword dPhobosFunction putElements
-"std.digest.ripemd
+" std.digest.ripemd
 syntax keyword dPhobosType RIPEMD160
 syntax keyword dPhobosFunction ripemd160Of
 syntax keyword dPhobosType RIPEMD160Digest
-"std.digest.sha
+" std.digest.sha
 syntax keyword dPhobosType SHA
 syntax keyword dPhobosType SHA1
 syntax keyword dPhobosType SHA224
@@ -470,7 +483,7 @@ syntax keyword dPhobosType SHA384Digest
 syntax keyword dPhobosType SHA512Digest
 syntax keyword dPhobosType SHA512_224Digest
 syntax keyword dPhobosType SHA512_256Digest
-"std.encoding
+" std.encoding
 syntax keyword dPhobosEnum INVALID_SEQUENCE
 syntax keyword dPhobosType AsciiChar
 syntax keyword dPhobosType AsciiString
@@ -509,7 +522,7 @@ syntax keyword dPhobosFunction safeDecode
 syntax keyword dPhobosFunction encodedLength
 syntax keyword dPhobosFunction codePoints
 syntax keyword dPhobosFunction transcode
-"std.file
+" std.file
 syntax keyword dPhobosFunction exists
 syntax keyword dPhobosFunction isDir
 syntax keyword dPhobosFunction isFile
@@ -542,7 +555,8 @@ syntax keyword dPhobosFunction getTimes
 syntax keyword dPhobosFunction getTimesWin
 syntax keyword dPhobosFunction setTimes
 syntax keyword dPhobosFunction timeLastModified
-"std.format
+syntax keyword dPhobosException FileException
+" std.format
 syntax keyword dPhobosType FormatSpec
 syntax keyword dPhobosFunction width
 syntax keyword dPhobosFunction precision
@@ -555,7 +569,8 @@ syntax keyword dPhobosFunction sformat
 syntax keyword dPhobosFunction formatValue
 syntax keyword dPhobosFunction singleSpec
 syntax keyword dPhobosFunction unformatValue
-"std.getopt
+syntax keyword dPhobosException FormatException
+" std.getopt
 syntax keyword dPhobosFunction getopt
 syntax keyword dPhobosEnum config
 syntax keyword dPhobosType GetoptResult
@@ -563,13 +578,15 @@ syntax keyword dPhobosBool helpWanted
 syntax keyword dPhobosType Option
 syntax keyword dPhobosFunction defaultGetoptPrinter
 syntax keyword dPhobosFunction defaultGetoptFormatter
-"std.json
+syntax keyword dPhobosException GetOptException
+" std.json
 syntax keyword dPhobosType JSONValue
 syntax keyword dPhobosEnum JSONFloatLiteral
 syntax keyword dPhobosEnum JSONOptions
 syntax keyword dPhobosEnum JSON_TYPE
 syntax keyword dPhobosEnum CustomFloatFlags
-"std.math
+syntax keyword dPhobosException JSONException
+" std.math
 syntax keyword dPhobosType IeeeFlags
 syntax keyword dPhobosType FloatingPointControl
 syntax keyword dPhobosConstant E
@@ -671,7 +688,7 @@ syntax keyword dPhobosFunction enableExceptions
 syntax keyword dPhobosFunction disableExceptions
 syntax keyword dPhobosFunction rounding
 syntax keyword dPhobosFunction enabledExceptions
-"std.mathspecial
+" std.mathspecial
 syntax keyword dPhobosFunction gamma
 syntax keyword dPhobosFunction logGamma
 syntax keyword dPhobosFunction sgnGamma
@@ -688,11 +705,11 @@ syntax keyword dPhobosFunction erf
 syntax keyword dPhobosFunction erfc
 syntax keyword dPhobosFunction normalDistribution
 syntax keyword dPhobosFunction normalDistributionInverse
-"std.mmfile
+" std.mmfile
 syntax keyword dPhobosType MmFile
 syntax keyword dPhobosEnum Mode
 syntax keyword dPhobosFunction mode
-"std.meta
+" std.meta
 syntax keyword dPhobosFunction Alias
 syntax keyword dPhobosFunction AliasSeq
 syntax keyword dPhobosFunction aliasSeqOf
@@ -717,7 +734,7 @@ syntax keyword dPhobosFunction templateOr
 syntax keyword dPhobosFunction staticIsSorted
 syntax keyword dPhobosFunction ApplyLeft
 syntax keyword dPhobosFunction ApplyRight
-"std.net.curl
+" std.net.curl
 syntax keyword dPhobosFunction download
 syntax keyword dPhobosFunction upload
 syntax keyword dPhobosFunction post
@@ -796,7 +813,7 @@ syntax keyword dPhobosFunction set
 syntax keyword dPhobosFunction clearIfSupported
 syntax keyword dPhobosFunction onSeek
 syntax keyword dPhobosFunction onSocketOption
-"std.net.isemail
+" std.net.isemail
 syntax keyword dPhobosFunction isEmail
 syntax keyword dPhobosBool CheckDns
 syntax keyword dPhobosType EmailStatus
@@ -807,7 +824,7 @@ syntax keyword dPhobosFunction statusCode
 syntax keyword dPhobosFunction status
 syntax keyword dPhobosFunction statusCodeDescription
 syntax keyword dPhobosEnum EmailStatusCode
-"std.numeric
+" std.numeric
 syntax keyword dPhobosEnum CustomFloatFlags
 syntax keyword dPhobosType CustomFloat
 syntax keyword dPhobosType FPTemporary
@@ -828,7 +845,7 @@ syntax keyword dPhobosFunction gcd
 syntax keyword dPhobosType Fft
 syntax keyword dPhobosFunction fft
 syntax keyword dPhobosFunction inverseFft
-"std.outbuffer
+" std.outbuffer
 syntax keyword dPhobosType OutBuffer
 syntax keyword dPhobosFunction toBytes
 syntax keyword dPhobosFunction fill0
@@ -838,7 +855,7 @@ syntax keyword dPhobosFunction align4
 syntax keyword dPhobosFunction vprintf
 syntax keyword dPhobosFunction printf
 syntax keyword dPhobosFunction spread
-"std.parallelism
+" std.parallelism
 syntax keyword dPhobosType TaskPool
 syntax keyword dPhobosConstant totalCPUs
 syntax keyword dPhobosType Task
@@ -863,7 +880,7 @@ syntax keyword dPhobosType WorkerLocalStorageRange
 syntax keyword dPhobosFunction workerLocalStorage
 syntax keyword dPhobosFunction isDaemon
 syntax keyword dPhobosFunction priority
-"std.path
+" std.path
 syntax keyword dPhobosEnum dirSeparator
 syntax keyword dPhobosEnum pathSeparator
 syntax keyword dPhobosEnum CaseSensitive
@@ -898,7 +915,7 @@ syntax keyword dPhobosFunction withExtension
 syntax keyword dPhobosFunction filenameCharCmp
 syntax keyword dPhobosFunction filenameCmp
 syntax keyword dPhobosFunction globMatch
-"std.process
+" std.process
 syntax keyword dPhobosFunction spawnProcess
 syntax keyword dPhobosFunction spawnShell
 syntax keyword dPhobosEnum Config
@@ -934,7 +951,7 @@ syntax keyword dPhobosFunction execve
 syntax keyword dPhobosFunction execvp
 syntax keyword dPhobosFunction execvpe
 syntax keyword dPhobosFunction browse
-"std.random
+" std.random
 syntax keyword dPhobosFunction isUniformRNG
 syntax keyword dPhobosFunction isSeedable
 syntax keyword dPhobosType LinearCongruentialEngine
@@ -966,7 +983,7 @@ syntax keyword dPhobosType RandomCover
 syntax keyword dPhobosFunction randomCover
 syntax keyword dPhobosType RandomSample
 syntax keyword dPhobosFunction randomSample
-"std.range
+" std.range
 syntax keyword dPhobosFunction chain
 syntax keyword dPhobosFunction choose
 syntax keyword dPhobosFunction chooseAmong
@@ -1031,7 +1048,7 @@ syntax keyword dPhobosFunction assumeSorted
 syntax keyword dPhobosType RefRange
 syntax keyword dPhobosFunction refRange
 syntax keyword dPhobosFunction bitwise
-"std.range.interfaces
+" std.range.interfaces
 syntax keyword dPhobosType InputRange
 syntax keyword dPhobosType InputAssignable
 syntax keyword dPhobosType ForwardRange
@@ -1045,7 +1062,7 @@ syntax keyword dPhobosType OutputRange
 syntax keyword dPhobosType OutputRangeObject
 syntax keyword dPhobosType InputRangeObject
 syntax keyword dPhobosType MostDerivedInputRange
-"std.range.primitives
+" std.range.primitives
 syntax keyword dPhobosFunction isInputRange
 syntax keyword dPhobosFunction isOutputRange
 syntax keyword dPhobosFunction isForwardRange
@@ -1067,7 +1084,7 @@ syntax keyword dPhobosFunction popBackExactly
 syntax keyword dPhobosFunction moveFront
 syntax keyword dPhobosFunction moveBack
 syntax keyword dPhobosFunction walkLength
-"std.regex
+" std.regex
 syntax keyword dPhobosType Regex
 syntax keyword dPhobosType StaticRegex
 syntax keyword dPhobosFunction regex
@@ -1088,11 +1105,11 @@ syntax keyword dPhobosFunction replaceAllInto
 syntax keyword dPhobosType Splitter
 syntax keyword dPhobosFunction escaper
 syntax keyword dPhobosException RegexException
-"std.signal
+" std.signal
 syntax keyword dPhobosType Signal
 syntax keyword dPhobosFunction disconnect
 syntax keyword dPhobosFunction emit
-"std.socket
+" std.socket
 syntax keyword dPhobosException SocketException
 syntax keyword dPhobosFunction lastSocketError
 syntax keyword dPhobosException SocketOSException
@@ -1161,7 +1178,7 @@ syntax keyword dPhobosFunction createAddress
 syntax keyword dPhobosType TcpSocket
 syntax keyword dPhobosType UdpSocket
 syntax keyword dPhobosFunction socketPair
-"std.string
+" std.string
 syntax keyword dPhobosFunction column
 syntax keyword dPhobosFunction inPattern
 syntax keyword dPhobosFunction indexOf
@@ -1205,7 +1222,7 @@ syntax keyword dPhobosFunction splitLines
 syntax keyword dPhobosFunction toStringz
 syntax keyword dPhobosBool CaseSensitive
 syntax keyword dPhobosType StringException
-"std.stdint
+" std.stdint
 syntax keyword dPhobosType int8_t
 syntax keyword dPhobosType uint8_t
 syntax keyword dPhobosType int16_t
@@ -1219,7 +1236,7 @@ syntax keyword dPhobosType uintptr_t
 syntax keyword dPhobosType intmax_t
 syntax keyword dPhobosType uintmax_t
 syntax keyword dPhobosType BitRange
-"std.stdio
+" std.stdio
 syntax keyword dPhobosBool KeepTerminator
 syntax keyword dPhobosType File
 syntax keyword dPhobosType lines
@@ -1269,12 +1286,13 @@ syntax keyword dPhobosFunction byChunk
 syntax keyword dPhobosFunction lockingTextWriter
 syntax keyword dPhobosFunction lockingBinaryWriter
 syntax keyword dPhobosFunction toFile
-"std.system
+syntax keyword dPhobosException StdioException
+" std.system
 syntax keyword dPhobosConstant os
 syntax keyword dPhobosConstant endian
 syntax keyword dPhobosEnum OS
 syntax keyword dPhobosEnum Endian
-"std.traits
+" std.traits
 syntax keyword dPhobosFunction fullyQualifiedName
 syntax keyword dPhobosFunction moduleName
 syntax keyword dPhobosFunction packageName
@@ -1389,7 +1407,7 @@ syntax keyword dPhobosFunction select
 syntax keyword dPhobosFunction hasUDA
 syntax keyword dPhobosFunction getUDAs
 syntax keyword dPhobosFunction getSymbolsByUDA
-"std.typecons
+" std.typecons
 syntax keyword dPhobosType Unique
 syntax keyword dPhobosFunction create
 syntax keyword dPhobosType Tuple
@@ -1432,9 +1450,9 @@ syntax keyword dPhobosFunction isBitFlagEnum
 syntax keyword dPhobosType BitFlags
 syntax keyword dPhobosFunction ReplaceType
 syntax keyword dPhobosType Ternary
-"std.typetuple
+" std.typetuple
 syntax keyword dPhobosType TypeTuple
-"std.uni
+" std.uni
 syntax keyword dPhobosEnum lineSep
 syntax keyword dPhobosEnum paraSep
 syntax keyword dPhobosEnum nelSep
@@ -1487,7 +1505,7 @@ syntax keyword dPhobosFunction isPrivateUse
 syntax keyword dPhobosFunction isSurrogate
 syntax keyword dPhobosFunction isSurrogateLo
 syntax keyword dPhobosFunction isNonCharacter
-"std.uri
+" std.uri
 syntax keyword dPhobosException URIException
 syntax keyword dPhobosFunction decode
 syntax keyword dPhobosFunction decodeComponent
@@ -1495,7 +1513,7 @@ syntax keyword dPhobosFunction encode
 syntax keyword dPhobosFunction encodeComponent
 syntax keyword dPhobosFunction uriLength
 syntax keyword dPhobosFunction emailLength
-"std.utf
+" std.utf
 syntax keyword dPhobosException UTFException
 syntax keyword dPhobosFunction isValidDchar
 syntax keyword dPhobosFunction stride
@@ -1518,7 +1536,7 @@ syntax keyword dPhobosFunction byChar
 syntax keyword dPhobosFunction byWchar
 syntax keyword dPhobosFunction byDchar
 syntax keyword dPhobosFunction byUTF
-"std.uuid
+" std.uuid
 syntax keyword dPhobosType UUID
 syntax keyword dPhobosFunction md5UUID
 syntax keyword dPhobosFunction sha1UUID
@@ -1530,7 +1548,7 @@ syntax keyword dPhobosFunction oidNamespace
 syntax keyword dPhobosFunction x500Namespace
 syntax keyword dPhobosEnum uuidRegex
 syntax keyword dPhobosException UUIDParsingException
-"std.variant
+" std.variant
 syntax keyword dPhobosFunction maxSize
 syntax keyword dPhobosType VariantN
 syntax keyword dPhobosConstant AllowedTypes
@@ -1544,14 +1562,14 @@ syntax keyword dPhobosFunction variantArray
 syntax keyword dPhobosException VariantException
 syntax keyword dPhobosFunction visit
 syntax keyword dPhobosFunction tryVisit
-"std.windows.charset
+" std.windows.charset
 syntax keyword dPhobosFunction toMBSz
 syntax keyword dPhobosFunction fromMBSz
-"std.windows.syserror
+" std.windows.syserror
 syntax keyword dPhobosFunction sysErrorString
 syntax keyword dPhobosException WindowsException
 syntax keyword dPhobosFunction wenforce
-"std.zip
+" std.zip
 syntax keyword dPhobosException ZipException
 syntax keyword dPhobosEnum CompressionMethod
 syntax keyword dPhobosType ArchiveMember
@@ -1575,14 +1593,14 @@ syntax keyword dPhobosFunction directory
 syntax keyword dPhobosFunction addMember
 syntax keyword dPhobosFunction deleteMember
 syntax keyword dPhobosFunction build
-"std.zlib
+" std.zlib
 syntax keyword dPhobosException ZlibException
 syntax keyword dPhobosFunction adler32
 syntax keyword dPhobosFunction uncompress
 syntax keyword dPhobosEnum HeaderFormat
 syntax keyword dPhobosType Compress
 syntax keyword dPhobosType UnCompress
-"generic members
+" generic members
 syntax keyword dPhobosFunction popFront
 syntax keyword dPhobosFunction length
 syntax keyword dPhobosFunction reserve
@@ -1594,14 +1612,17 @@ syntax keyword dPhobosFunction toString
 syntax keyword dPhobosFunction append
 syntax keyword dPhobosFunction empty
 syntax keyword dPhobosFunction save
-"core.atomic
+
+" core
+
+" core.atomic
 syntax keyword dPhobosEnum MemoryOrder
 syntax keyword dPhobosFunction atomicOp
 syntax keyword dPhobosFunction cas
 syntax keyword dPhobosFunction atomicLoad
 syntax keyword dPhobosFunction atomicStore
 syntax keyword dPhobosFunction atomicFence
-"core.bitop
+" core.bitop
 syntax keyword dPhobosFunction bsf
 syntax keyword dPhobosFunction bsr
 syntax keyword dPhobosFunction bt
@@ -1610,24 +1631,12 @@ syntax keyword dPhobosFunction btr
 syntax keyword dPhobosFunction bts
 syntax keyword dPhobosFunction bitsPerWord
 syntax keyword dPhobosFunction bswap
-"core.math
-syntax keyword dPhobosFunction yl2x
-"core.cpuid
+" core.cpuid
 syntax keyword dPhobosFunction CacheInfo
+" core.math
+syntax keyword dPhobosFunction yl2x
 
-"Exceptions
-syntax keyword dPhobosException MessageMismatch
-syntax keyword dPhobosException OwnerTerminated
-syntax keyword dPhobosException LinkTerminated
-syntax keyword dPhobosException PriorityMessageException
-syntax keyword dPhobosException MailboxFull
-syntax keyword dPhobosException TidMissingException
-syntax keyword dPhobosException ConvException
-syntax keyword dPhobosException ConvOverflowException
-syntax keyword dPhobosException CSVException
-syntax keyword dPhobosException HeaderMismatchException
-syntax keyword dPhobosException IncompleteCellException
-syntax keyword dPhobosException DateTimeException
+" Exceptions
 syntax keyword dPhobosException assertNotThrown
 syntax keyword dPhobosException assertThrown
 syntax keyword dPhobosException assumeUnique
@@ -1644,14 +1653,8 @@ syntax keyword dPhobosException basicExceptionCtors
 syntax keyword dPhobosException emptyExceptionMsg
 syntax keyword dPhobosException ErrnoException
 syntax keyword dPhobosException RangePrimitive
-syntax keyword dPhobosException FileException
-syntax keyword dPhobosException FormatException
-syntax keyword dPhobosException GetOptException
-syntax keyword dPhobosException JSONException
-syntax keyword dPhobosException StdioException
-syntax keyword dPhobosException Base64Exception
 
-"std.functional
+" std.functional
 syntax keyword dPhobosFunctional adjoin
 syntax keyword dPhobosFunctional compose
 syntax keyword dPhobosFunctional forward
