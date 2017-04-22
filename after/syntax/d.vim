@@ -1612,7 +1612,7 @@ syntax keyword dPhobosFunction toString
 syntax keyword dPhobosFunction append
 syntax keyword dPhobosFunction empty
 syntax keyword dPhobosFunction save
-
+syntax keyword dPhobosFunction sizeOf
 " core
 
 " core.atomic
@@ -1631,10 +1631,121 @@ syntax keyword dPhobosFunction btr
 syntax keyword dPhobosFunction bts
 syntax keyword dPhobosFunction bitsPerWord
 syntax keyword dPhobosFunction bswap
+syntax keyword dPhobosFunction _popcnt
+syntax keyword dPhobosType BitRange
+syntax keyword dPhobosFunction bitswap
+syntax keyword dPhobosFunction inp
+syntax keyword dPhobosFunction inpl
+syntax keyword dPhobosFunction inpw
+syntax keyword dPhobosFunction outp
+syntax keyword dPhobosFunction outpl
+syntax keyword dPhobosFunction outpw
+syntax keyword dPhobosFunction popcnt
+syntax keyword dPhobosFunction rol
+syntax keyword dPhobosFunction ror
+syntax keyword dPhobosFunction volatileLoad
+syntax keyword dPhobosFunction volatileStore
+" core.checkedint
+syntax keyword dPhobosFunction adds
+syntax keyword dPhobosFunction addu
+syntax keyword dPhobosFunction muls
+syntax keyword dPhobosFunction mulu
+syntax keyword dPhobosFunction negs
+syntax keyword dPhobosFunction subs
+syntax keyword dPhobosFunction subu
 " core.cpuid
 syntax keyword dPhobosFunction CacheInfo
+" core.demangle
+syntax keyword dPhobosFunction demangleType
+syntax keyword dPhobosFunction mangle
+syntax keyword dPhobosFunction mangleFunc
+syntax keyword dPhobosEnum cPrefix
+" core.exception
+syntax keyword dPhobosException RangeError
+syntax keyword dPhobosException AssertError
+syntax keyword dPhobosException FinalizeError
+syntax keyword dPhobosException HiddenFuncError
+syntax keyword dPhobosException OutOfMemoryError
+syntax keyword dPhobosException InvalidMemoryOperationError
+syntax keyword dPhobosException SwitchError
+syntax keyword dPhobosException UnicodeException
+syntax keyword dPhobosType AssertHandler
+syntax keyword dPhobosFunction assertHandler
+syntax keyword dPhobosFunction setAssertHandler
+syntax keyword dPhobosFunction onAssertError
+syntax keyword dPhobosFunction onAssertErrorMsg
+syntax keyword dPhobosFunction onUnittestErrorMsg
+syntax keyword dPhobosFunction onRangeError
+syntax keyword dPhobosFunction onFinalizeError
+syntax keyword dPhobosFunction onHiddenFuncError
+syntax keyword dPhobosFunction onOutOfMemoryError
+syntax keyword dPhobosFunction onInvalidMemoryOperationError
+syntax keyword dPhobosFunction onSwitchError
+syntax keyword dPhobosFunction onUnicodeError
+syntax keyword dPhobosFunction _d_assertp
+syntax keyword dPhobosFunction _d_assert_msg
+syntax keyword dPhobosFunction _d_assert
+syntax keyword dPhobosFunction _d_unittestp
+syntax keyword dPhobosFunction _d_unittest_msg
+syntax keyword dPhobosFunction _d_unittest
+syntax keyword dPhobosFunction _d_arrayboundsp
+syntax keyword dPhobosFunction _d_arraybounds
+syntax keyword dPhobosFunction _d_switch_error
 " core.math
 syntax keyword dPhobosFunction yl2x
+" core.memory
+syntax keyword dPhobosType GC
+syntax keyword dPhobosType Stats
+syntax keyword dPhobosFunction enbale
+syntax keyword dPhobosFunction disable
+syntax keyword dPhobosFunction collect
+syntax keyword dPhobosFunction minimize
+syntax keyword dPhobosEnum BlkAttr
+syntax keyword dPhobosEnum BlkInfo
+syntax keyword dPhobosFunction getAttr
+syntax keyword dPhobosFunction setAttr
+syntax keyword dPhobosFunction clrAttr
+syntax keyword dPhobosFunction malloc
+syntax keyword dPhobosFunction qalloc
+syntax keyword dPhobosFunction calloc
+syntax keyword dPhobosFunction realloc
+syntax keyword dPhobosFunction extend
+syntax keyword dPhobosFunction free
+syntax keyword dPhobosFunction addrOf
+syntax keyword dPhobosFunction query
+syntax keyword dPhobosFunction stats
+syntax keyword dPhobosFunction addRoot
+syntax keyword dPhobosFunction removeRoot
+syntax keyword dPhobosFunction addRange
+syntax keyword dPhobosFunction removeRange
+syntax keyword dPhobosFunction runFinalizers
+syntax keyword dPhobosFunction pureMalloc
+syntax keyword dPhobosFunction pureCalloc
+syntax keyword dPhobosFunction pureRealloc
+" core.runtime
+syntax keyword dPhobosFunction rt_loadLibrary
+syntax keyword dPhobosFunction rt_unloadLibrary
+syntax keyword dPhobosFunction rt_init
+syntax keyword dPhobosFunction rt_term
+syntax keyword dPhobosType CArgs
+syntax keyword dPhobosType Runtime
+syntax keyword dPhobosFunction terminate
+syntax keyword dPhobosFunction args
+syntax keyword dPhobosFunction cArgs
+syntax keyword dPhobosFunction loadLibrary
+syntax keyword dPhobosFunction unloadLibrary
+syntax keyword dPhobosFunction traceHandler
+syntax keyword dPhobosFunction collectHandler
+syntax keyword dPhobosFunction moduleUnitTester
+syntax keyword dPhobosFunction dmd_coverSourcePath
+syntax keyword dPhobosFunction dmd_coverDestPath
+syntax keyword dPhobosFunction dmd_coverSetMerge
+syntax keyword dPhobosFunction trace_setlogfilename
+syntax keyword dPhobosFunction trace_setdeffilename
+syntax keyword dPhobosFunction profilegc_setlogfilename
+syntax keyword dPhobosFunction runModuleUnitTests
+syntax keyword dPhobosFunction defaultTraceHandler
+" core.simd
 
 " Exceptions
 syntax keyword dPhobosException assertNotThrown
