@@ -2933,6 +2933,29 @@ syntax keyword dPhobosFunctional binaryFun
 syntax keyword dPhobosFunctional binaryReverseArgs
 syntax keyword dPhobosFunctional pipe
 
+" float properties :
+syntax keyword dPhobosFunction infinity
+syntax keyword dPhobosFunction nan
+syntax keyword dPhobosFunction dig
+syntax keyword dPhobosFunction epsilon
+syntax keyword dPhobosFunction mant_dig
+syntax keyword dPhobosFunction max_10_exp
+syntax keyword dPhobosFunction max_exp
+syntax keyword dPhobosFunction min_exp
+syntax keyword dPhobosFunction min_normal
+syntax keyword dPhobosFunction re
+syntax keyword dPhobosFunction im
+
+" class types :
+syntax keyword dPhobosFunction classinfo
+
+" generic properties :
+syntax keyword dPhobosFunction stringof
+syntax keyword dPhobosFunction alignof
+syntax keyword dPhobosFunction sizeof
+syntax keyword dPhobosFunction init
+syntax keyword dPhobosFunction mangleof
+
 " Default highlighting
 if version >= 508 || !exists("did_d_syntax_inits")
 	if version < 508
