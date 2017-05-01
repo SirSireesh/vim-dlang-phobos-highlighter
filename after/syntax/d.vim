@@ -369,11 +369,39 @@ syntax keyword dPhobosType Date
 syntax keyword dPhobosType TimeOfDay
 syntax keyword dPhobosType DateTime
 syntax keyword dPhobosType Clock
+syntax keyword dPhobosType StopWatch
+syntax keyword dPhobosType ComparingBenchmarkResult
 syntax keyword dPhobosEnum LetterCase
 syntax keyword dPhobosEnum Month
 syntax keyword dPhobosEnum DayOfWeek
 syntax keyword dPhobosEnum Direction
+syntax keyword dPhobosEnum isTimePoint
+syntax keyword dPhobosFunction yearIsLeapYear
+syntax keyword dPhobosFunction unixTimeToStdTime
+syntax keyword dPhobosFunction stdTimeToUnixTime
+syntax keyword dPhobosFunction SYSTEMTIMEToSysTime
+syntax keyword dPhobosFunction SysTimeToSYSTEMTIME
+syntax keyword dPhobosFunction FILETIMEToStdTime
+syntax keyword dPhobosFunction FILETIMEToSysTime
+syntax keyword dPhobosFunction stdTimeToFILETIME
+syntax keyword dPhobosFunction SysTimeToFILETIME
+syntax keyword dPhobosType DosFileTime
+syntax keyword dPhobosFunction DosFileTimeToSysTime
+syntax keyword dPhobosFunction SysTimeToDosFileTime
+syntax keyword dPhobosFunction parseRFC822DateTime
+syntax keyword dPhobosFunction validTimeUnits
+syntax keyword dPhobosFunction cmpTimeUnits
+syntax keyword dPhobosFunction CmpTimeUnits
+syntax keyword dPhobosFunction enforceValid
+syntax keyword dPhobosFunction point
+syntax keyword dPhobosFunction baseTime
+syntax keyword dPhobosFunction targetTime
+syntax keyword dPhobosFunction comparingBenchmark
 syntax keyword dPhobosConstant timeStrings
+syntax keyword dPhobosFunction stop
+syntax keyword dPhobosFunction setMeasured
+syntax keyword dPhobosFunction running
+syntax keyword dPhobosFunction benchmark
 syntax keyword dPhobosFunction currTime
 syntax keyword dPhobosFunction currStdTime
 syntax keyword dPhobosFunction year
@@ -1608,6 +1636,7 @@ syntax keyword dPhobosFunction append
 syntax keyword dPhobosFunction empty
 syntax keyword dPhobosFunction save
 syntax keyword dPhobosFunction sizeOf
+syntax keyword dPhobosFunction ptr
 " core
 
 " core.atomic
@@ -2832,6 +2861,7 @@ syntax keyword dPhobosFunction state
 syntax keyword dPhobosFunction yieldAndThrow
 syntax keyword dPhobosType ThreadID
 " core.time
+syntax keyword dPhobosType TickDuration
 syntax keyword dPhobosEnum ClockType
 syntax keyword dPhobosEnum normal
 syntax keyword dPhobosEnum bootTime
@@ -2955,6 +2985,14 @@ syntax keyword dPhobosFunction alignof
 syntax keyword dPhobosFunction sizeof
 syntax keyword dPhobosFunction init
 syntax keyword dPhobosFunction mangleof
+
+" Assciative arrays:
+syntax keyword dPhobosFunction byKey
+syntax keyword dPhobosFunction rehash
+syntax keyword dPhobosFunction values
+syntax keyword dPhobosFunction keys
+syntax keyword dPhobosFunction byValue
+syntax keyword dPhobosFunction byKeyValue
 
 " Default highlighting
 if version >= 508 || !exists("did_d_syntax_inits")
