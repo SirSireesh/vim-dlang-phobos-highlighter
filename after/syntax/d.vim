@@ -3007,7 +3007,6 @@ if version >= 508 || !exists("did_d_syntax_inits")
 	endif
 	HiLink dPhobosBool         Boolean
 	HiLink dStorageClass    StorageClass
-	HiLink dStatement       Statement
 	HiLink dPhobosFunction     Function
 	HiLink dPhobosFunctional   Typedef
 	HiLink dPhobosConstant     Constant
@@ -3015,8 +3014,5 @@ if version >= 508 || !exists("did_d_syntax_inits")
 	HiLink dPhobosType         Typedef
 	HiLink dPhobosException    Exception
 	HiLink dPhobosEnum         Typedef
-	HiLink dPhobosCast         Statement " be consistent with official syntax
-	HiLink dRawString       String
-	HiLink dRawDelimiter    Delimiter
 	delcommand HiLink
 endif
