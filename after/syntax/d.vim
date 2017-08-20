@@ -453,6 +453,8 @@ syntax keyword dPhobosType CRC32
 syntax keyword dPhobosFunction put
 syntax keyword dPhobosFunction finish
 syntax keyword dPhobosFunction crc32Of
+syntax keyword dPhobosFunction crc64ISOOf
+syntax keyword dPhobosFunction crc64ECMAOf
 syntax keyword dPhobosFunction crcHexString
 syntax keyword dPhobosType CRC32Digest
 syntax keyword dPhobosType ExampleDigest
@@ -464,6 +466,7 @@ syntax keyword dPhobosFunction hasBlockSize
 syntax keyword dPhobosFunction digest
 syntax keyword dPhobosFunction hexDigest
 syntax keyword dPhobosFunction makeDigest
+syntax keyword dPhobosFunction secureEqual
 syntax keyword dPhobosNamespace Digest
 syntax keyword dPhobosFunction reset
 syntax keyword dPhobosEnum Order
