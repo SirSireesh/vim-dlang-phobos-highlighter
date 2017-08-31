@@ -58,6 +58,103 @@ syntax match dLinkageType "\v\C\+\+" "C++
 syntax keyword dLinkageType D
 hi def link dLinkageType Constant
 
+"Version identifiers
+syntax keyword dVersionID DigitalMars
+syntax keyword dVersionID GNU
+syntax keyword dVersionID LDC
+syntax keyword dVersionID SDC
+syntax keyword dVersionID Windows
+syntax keyword dVersionID Win32
+syntax keyword dVersionID Win64
+syntax keyword dVersionID linux
+syntax keyword dVersionID OSX
+syntax keyword dVersionID FreeBSD
+syntax keyword dVersionID NetBSD
+syntax keyword dVersionID OpenBSD
+syntax keyword dVersionID DragonFlyBSD
+syntax keyword dVersionID BSD
+syntax keyword dVersionID Solaris
+syntax keyword dVersionID Posix
+syntax keyword dVersionID AIX
+syntax keyword dVersionID Haiku
+syntax keyword dVersionID SkyOS
+syntax keyword dVersionID SysV3
+syntax keyword dVersionID Sysv4
+syntax keyword dVersionID Hurd
+syntax keyword dVersionID Android
+syntax keyword dVersionID PlayStation
+syntax keyword dVersionID PlayStation4
+syntax keyword dVersionID Cygwin
+syntax keyword dVersionID MinGW
+syntax keyword dVersionID FreeStanding
+syntax keyword dVersionID CRuntime_Bionic
+syntax keyword dVersionID CRuntime_DigitalMars
+syntax keyword dVersionID CRuntime_Glibc
+syntax keyword dVersionID CRuntime_Microsoft
+syntax keyword dVersionID CRuntime_Musl
+syntax keyword dVersionID CRuntime_UClibc
+syntax keyword dVersionID X86
+syntax keyword dVersionID X86_64
+syntax keyword dVersionID ARM
+syntax keyword dVersionID ARM_Thumb
+syntax keyword dVersionID ARM_SoftFloat
+syntax keyword dVersionID ARM_SoftFP
+syntax keyword dVersionID ARM_HardFloat
+syntax keyword dVersionID AArch64
+syntax keyword dVersionID Epiphany
+syntax keyword dVersionID PPC
+syntax keyword dVersionID PPC_SoftFloat
+syntax keyword dVersionID PPC_HardFloat
+syntax keyword dVersionID PPC64
+syntax keyword dVersionID IA64
+syntax keyword dVersionID MIPS32
+syntax keyword dVersionID MIPS64
+syntax keyword dVersionID MIPS_O32
+syntax keyword dVersionID MIPS_N32
+syntax keyword dVersionID MIPS_O64
+syntax keyword dVersionID MIPS_N64
+syntax keyword dVersionID MIPS_EABI
+syntax keyword dVersionID MIPS_SoftFloat
+syntax keyword dVersionID MIPS_HardFloat
+syntax keyword dVersionID NVPTX
+syntax keyword dVersionID NVPTX64
+syntax keyword dVersionID RISCV32
+syntax keyword dVersionID RISCV64
+syntax keyword dVersionID SPARC
+syntax keyword dVersionID SPARC_V8Plus
+syntax keyword dVersionID SPARC_SoftFloat
+syntax keyword dVersionID SPARC_HardFloat
+syntax keyword dVersionID SPARC64
+syntax keyword dVersionID S390
+syntax keyword dVersionID SystemZ
+syntax keyword dVersionID HPPA
+syntax keyword dVersionID HPPA64
+syntax keyword dVersionID SH
+syntax keyword dVersionID Alpha
+syntax keyword dVersionID Alpha_SoftFloat
+syntax keyword dVersionID Alpha_HardFloat
+syntax keyword dVersionID LittleEndian
+syntax keyword dVersionID BigEndian
+syntax keyword dVersionID ELFv1
+syntax keyword dVersionID ELFv2
+syntax keyword dVersionID D_Coverage
+syntax keyword dVersionID D_Ddoc
+syntax keyword dVersionID D_InlineAsm_X86
+syntax keyword dVersionID D_InlineAsm_X86_64
+syntax keyword dVersionID D_LP64
+syntax keyword dVersionID D_X32
+syntax keyword dVersionID D_HardFloat
+syntax keyword dVersionID D_SoftFloat
+syntax keyword dVersionID D_PIC
+syntax keyword dVersionID D_SIMD
+syntax keyword dVersionID D_AVX
+syntax keyword dVersionID D_AVX2
+syntax keyword dVersionID D_Version2
+syntax keyword dVersionID D_NoBoundsChecks
+syntax keyword dVersionID D_ObjectiveC
+syntax keyword dVersionID none
+hi def link dVersionID Constant
+
 " Cluster for all the stdlib functions defined below
 syn cluster dPhobosgroup     contains=dPhobosFunction,dPhobosConstant,dPhobosNamespace,dPhobosType,dPhobosException,,dPhobosEnum
 
@@ -3019,7 +3116,7 @@ if version >= 508 || !exists("did_d_syntax_inits")
 		command -nargs=+ HiLink hi def link <args>
 	endif
 	HiLink dPhobosBool         Boolean
-	HiLink dStorageClass    StorageClass
+	HiLink dStorageClass       StorageClass
 	HiLink dPhobosFunction     Function
 	HiLink dPhobosFunctional   Typedef
 	HiLink dPhobosConstant     Constant
