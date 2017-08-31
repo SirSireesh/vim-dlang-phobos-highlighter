@@ -6,8 +6,6 @@ development in Vim. Compared to the standard syntax highlighting for D it
 adds highlighting of (user defined) functions and the containers and types in
 the standard library (phobos).
 
-Development is done at: http://github.com/Sirsireesh/vim-dlang-extra-highlight
-
 Optional features
 -----------------
 
@@ -23,7 +21,7 @@ Follow one of the sets of directions below and reload vim afterwards.
 #### Vundle
 Install using [vundle](https://github.com/gmarik/Vundle.vim) by adding
 ```vim
-Plugin 'Sirsireesh/vim-dlang-extra-highlight'
+Plugin 'Sirsireesh/vim-dlang-phobos-highlighter'
 ```
 to .vimrc and run `:PluginInstall`.
 
@@ -33,17 +31,17 @@ If you have [pathogen](https://github.com/tpope/vim-pathogen) installed,
 and you prefer to use git submodules, run
 ```sh
 cd ~/.vim
-git submodule add https://github.com/Sirsireesh/vim-dlang-extra-highlight.git bundle/syntax/
+git submodule add https://github.com/Sirsireesh/vim-dlang-phobos-highlighter.git bundle/syntax/
 ```
 
 #### Manual installation
 If you don't have either Vundle or Pathogen installed, copy the d.vim file
 to .vim/after/syntax.
 ```sh
-git clone https://github.com/Sirsireesh/vim-dlang-extra-highlight.git /tmp/vim-dlang-extra-highlight
+git clone https://github.com/Sirsireesh/vim-dlang-phobos-highlighter.git /tmp/vim-dlang-phobos-highlighter
 mkdir -p ~/.vim/after/syntax/
-mv /tmp/vim-dlang-extra-highlight/after/syntax/d.vim ~/.vim/after/syntax/d.vim
-rm -rf /tmp/vim-dlang-extra-highlight
+mv /tmp/vim-dlang-phobos-highlighter/after/syntax/d.vim ~/.vim/after/syntax/d.vim
+rm -rf /tmp/vim-dlang-phobos-highlighter
 ```
 
 Issues
