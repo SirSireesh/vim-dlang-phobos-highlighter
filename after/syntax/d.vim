@@ -62,6 +62,11 @@ syn cluster dSTLgroup     contains=dPhobosFunction,dSTLfunctional,dPhobosConstan
 syntax keyword dPhobosNamespace std
 syntax keyword dPhobosNamespace etc
 syntax keyword dPhobosNamespace core
+"The followinf aren't phobos constants
+syntax keyword dPhobosConstant C
+syntax keyword dPhobosConstant Objective-C
+syntax keyword dPhobosConstant C++
+syntax keyword dPhobosConstant D
 
 " std.algorithm
 syntax keyword dPhobosFunction all
