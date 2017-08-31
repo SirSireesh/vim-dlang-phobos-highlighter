@@ -32,6 +32,11 @@ syn match   dCustomParen    "(" contains=dParen "contains=cCppParen
 syn match   dCustomFunc     "\w\+\s*(\@="
 hi def link dCustomFunc  Function
 
+"The following is needed to corectly highlight scope and version as keywords
+"and not functions
+syntax keyword dKeyword version scope
+hi def link dKeyword Keyword
+
 " Class and namespace scope
 if exists('g:d_class_scope_highlight') && g:d_class_scope_highlight
 	syn match   dCustomScope    "."
@@ -45,8 +50,16 @@ endif
 "syn match dUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=dType,dDelimiter,dDefine
 "hi def link dCustomFunc  Function
 
+"Linkage types
+syntax keyword dLinkageType Pascal
+syntax keyword dLinkageType C
+syntax match dLinkageType "\v\Objective\-C"
+syntax match dLinkageType "\v\C\+\+" "C++
+syntax keyword dLinkageType D
+hi def link dLinkageType Constant
+
 " Cluster for all the stdlib functions defined below
-syn cluster dSTLgroup     contains=dPhobosFunction,dSTLfunctional,dPhobosConstant,dPhobosNamespace,dPhobosType,dPhobosException,,dPhobosEnum
+syn cluster dPhobosgroup     contains=dPhobosFunction,dPhobosConstant,dPhobosNamespace,dPhobosType,dPhobosException,,dPhobosEnum
 
 " -----------------------------------------------------------------------------
 "  Standard library types and functions.
@@ -62,11 +75,6 @@ syn cluster dSTLgroup     contains=dPhobosFunction,dSTLfunctional,dPhobosConstan
 syntax keyword dPhobosNamespace std
 syntax keyword dPhobosNamespace etc
 syntax keyword dPhobosNamespace core
-"The followinf aren't phobos constants
-syntax keyword dPhobosConstant C
-syntax keyword dPhobosConstant Objective-C
-syntax keyword dPhobosConstant C++
-syntax keyword dPhobosConstant D
 
 " std.algorithm
 syntax keyword dPhobosFunction all
