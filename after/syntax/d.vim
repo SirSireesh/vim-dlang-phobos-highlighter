@@ -32,10 +32,25 @@ syn match   dCustomParen    "(" contains=dParen "contains=cCppParen
 syn match   dCustomFunc     "\w\+\s*(\@="
 hi def link dCustomFunc  Function
 
-"The following is needed to corectly highlight scope and version as keywords
-"and not functions
-syntax keyword dKeyword version scope
-hi def link dKeyword Keyword
+"The following is needed to corectly highlight some keywords
+syntax keyword dStatement version scope __traits
+hi def link dKeyword Statement
+
+" Version Identifiers
+syntax keyword dVersionIdentifier     DigitalMars GNU LDC SDC D_NET
+syntax keyword dVersionIdentifier     X86 X86_64 ARM PPC PPC64 IA64 MIPS MIPS64 Alpha ARM_Thumb AArch64 Epiphany NVPTX NVPTX64
+syntax keyword dVersionIdentifier     SPARC SPARC64 S390 S390X HPPA HPPA64 SH SH64 RISCV64 SystemZ
+syntax keyword dVersionIdentifier     linux Posix OSX FreeBSD DragonFlyBSD OpenBSD NetBSD BSD Windows Win32 Win64
+syntax keyword dVersionIdentifier     OpenBSD BSD Solaris AIX SkyOS SysV3 SysV4 Hurd Haiku Android PlayStation PlayStation4
+syntax keyword dVersionIdentifier     Cygwin MinGW FreeStanding ELFv1 ELFv2
+syntax keyword dVersionIdentifier     CRuntime_Bionic CRuntime_DigitalMars CRuntime_Glibc CRuntime_Musl CRuntime_UClibc
+syntax keyword dVersionIdentifier     LittleEndian BigEndian
+syntax keyword dVersionIdentifier     D_InlineAsm_X86 D_InlineAsm_X86_64
+syntax keyword dVersionIdentifier     D_Version2 D_Coverage D_Ddoc D_LP64 D_PIC D_NoBoundsChecks D_ObjectiveC D_X32 D_PIC D_SIMD D_AVX D_LP64
+syntax keyword dVersionIdentifier     unittest assert none all
+
+hi def link dVersion Statement
+hi def link dVersionIdentifier Constant
 
 " Class and namespace scope
 if exists('g:d_class_scope_highlight') && g:d_class_scope_highlight
@@ -57,103 +72,6 @@ syntax match dLinkageType "\v\Objective\-C"
 syntax match dLinkageType "\v\C\+\+" "C++
 syntax keyword dLinkageType D
 hi def link dLinkageType Constant
-
-"Version identifiers
-syntax keyword dVersionID DigitalMars
-syntax keyword dVersionID GNU
-syntax keyword dVersionID LDC
-syntax keyword dVersionID SDC
-syntax keyword dVersionID Windows
-syntax keyword dVersionID Win32
-syntax keyword dVersionID Win64
-syntax keyword dVersionID linux
-syntax keyword dVersionID OSX
-syntax keyword dVersionID FreeBSD
-syntax keyword dVersionID NetBSD
-syntax keyword dVersionID OpenBSD
-syntax keyword dVersionID DragonFlyBSD
-syntax keyword dVersionID BSD
-syntax keyword dVersionID Solaris
-syntax keyword dVersionID Posix
-syntax keyword dVersionID AIX
-syntax keyword dVersionID Haiku
-syntax keyword dVersionID SkyOS
-syntax keyword dVersionID SysV3
-syntax keyword dVersionID Sysv4
-syntax keyword dVersionID Hurd
-syntax keyword dVersionID Android
-syntax keyword dVersionID PlayStation
-syntax keyword dVersionID PlayStation4
-syntax keyword dVersionID Cygwin
-syntax keyword dVersionID MinGW
-syntax keyword dVersionID FreeStanding
-syntax keyword dVersionID CRuntime_Bionic
-syntax keyword dVersionID CRuntime_DigitalMars
-syntax keyword dVersionID CRuntime_Glibc
-syntax keyword dVersionID CRuntime_Microsoft
-syntax keyword dVersionID CRuntime_Musl
-syntax keyword dVersionID CRuntime_UClibc
-syntax keyword dVersionID X86
-syntax keyword dVersionID X86_64
-syntax keyword dVersionID ARM
-syntax keyword dVersionID ARM_Thumb
-syntax keyword dVersionID ARM_SoftFloat
-syntax keyword dVersionID ARM_SoftFP
-syntax keyword dVersionID ARM_HardFloat
-syntax keyword dVersionID AArch64
-syntax keyword dVersionID Epiphany
-syntax keyword dVersionID PPC
-syntax keyword dVersionID PPC_SoftFloat
-syntax keyword dVersionID PPC_HardFloat
-syntax keyword dVersionID PPC64
-syntax keyword dVersionID IA64
-syntax keyword dVersionID MIPS32
-syntax keyword dVersionID MIPS64
-syntax keyword dVersionID MIPS_O32
-syntax keyword dVersionID MIPS_N32
-syntax keyword dVersionID MIPS_O64
-syntax keyword dVersionID MIPS_N64
-syntax keyword dVersionID MIPS_EABI
-syntax keyword dVersionID MIPS_SoftFloat
-syntax keyword dVersionID MIPS_HardFloat
-syntax keyword dVersionID NVPTX
-syntax keyword dVersionID NVPTX64
-syntax keyword dVersionID RISCV32
-syntax keyword dVersionID RISCV64
-syntax keyword dVersionID SPARC
-syntax keyword dVersionID SPARC_V8Plus
-syntax keyword dVersionID SPARC_SoftFloat
-syntax keyword dVersionID SPARC_HardFloat
-syntax keyword dVersionID SPARC64
-syntax keyword dVersionID S390
-syntax keyword dVersionID SystemZ
-syntax keyword dVersionID HPPA
-syntax keyword dVersionID HPPA64
-syntax keyword dVersionID SH
-syntax keyword dVersionID Alpha
-syntax keyword dVersionID Alpha_SoftFloat
-syntax keyword dVersionID Alpha_HardFloat
-syntax keyword dVersionID LittleEndian
-syntax keyword dVersionID BigEndian
-syntax keyword dVersionID ELFv1
-syntax keyword dVersionID ELFv2
-syntax keyword dVersionID D_Coverage
-syntax keyword dVersionID D_Ddoc
-syntax keyword dVersionID D_InlineAsm_X86
-syntax keyword dVersionID D_InlineAsm_X86_64
-syntax keyword dVersionID D_LP64
-syntax keyword dVersionID D_X32
-syntax keyword dVersionID D_HardFloat
-syntax keyword dVersionID D_SoftFloat
-syntax keyword dVersionID D_PIC
-syntax keyword dVersionID D_SIMD
-syntax keyword dVersionID D_AVX
-syntax keyword dVersionID D_AVX2
-syntax keyword dVersionID D_Version2
-syntax keyword dVersionID D_NoBoundsChecks
-syntax keyword dVersionID D_ObjectiveC
-syntax keyword dVersionID none
-hi def link dVersionID Constant
 
 " Cluster for all the stdlib functions defined below
 syn cluster dPhobosgroup     contains=dPhobosFunction,dPhobosConstant,dPhobosNamespace,dPhobosType,dPhobosException,,dPhobosEnum
