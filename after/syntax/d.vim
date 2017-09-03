@@ -52,14 +52,6 @@ syntax keyword dVersionIdentifier     unittest assert none all
 hi def link dVersion Statement
 hi def link dVersionIdentifier Constant
 
-" Class and namespace scope
-if exists('g:d_class_scope_highlight') && g:d_class_scope_highlight
-	syn match   dCustomScope    "."
-	syn match   dCustomClass    "\w\+\s*."
-				\ contains=dCustomScope
-	hi def link dCustomClass Function
-endif
-
 " Alternative syntax that is used in:
 "  http://www.vim.org/scripts/script.php?script_id=3064
 "syn match dUserFunction "\<\h\w*\>\(\s\|\n\)*("me=e-1 contains=dType,dDelimiter,dDefine
@@ -69,7 +61,7 @@ endif
 syntax keyword dLinkageType Pascal
 syntax keyword dLinkageType C
 syntax match dLinkageType "\v\Objective\-C"
-syntax match dLinkageType "\v\C\+\+" "C++
+syntax match dLinkageType "\v\(\s{-}C\+\+\s{-}\)" "C++
 syntax keyword dLinkageType D
 hi def link dLinkageType Constant
 
