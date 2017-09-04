@@ -237,6 +237,7 @@ syntax keyword dPhobosFunction toUpper
 syntax keyword dPhobosType Encoder
 syntax keyword dPhobosType Decoder
 syntax keyword dPhobosEnum NoPadding
+syntax keyword dPhobosFunction Base64URLNoPadding
 syntax keyword dPhobosFunction encodeLength
 syntax keyword dPhobosFunction encode
 syntax keyword dPhobosFunction decodeLength
@@ -785,6 +786,7 @@ syntax keyword dPhobosFunction templateOr
 syntax keyword dPhobosFunction staticIsSorted
 syntax keyword dPhobosFunction ApplyLeft
 syntax keyword dPhobosFunction ApplyRight
+syntax keyword dPhobosFunction Stride
 " std.net.curl
 syntax keyword dPhobosFunction download
 syntax keyword dPhobosFunction upload
