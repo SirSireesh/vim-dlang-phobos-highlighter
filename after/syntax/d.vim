@@ -47,7 +47,7 @@ syntax keyword dVersionIdentifier     CRuntime_Bionic CRuntime_DigitalMars CRunt
 syntax keyword dVersionIdentifier     LittleEndian BigEndian
 syntax keyword dVersionIdentifier     D_InlineAsm_X86 D_InlineAsm_X86_64
 syntax keyword dVersionIdentifier     D_Version2 D_Coverage D_Ddoc D_LP64 D_PIC D_NoBoundsChecks D_ObjectiveC D_X32 D_PIC D_SIMD D_AVX D_LP64
-syntax keyword dVersionIdentifier     unittest assert none all
+syntax keyword dVersionIdentifier     unittest none all
 
 hi def link dVersion Statement
 hi def link dVersionIdentifier Constant
@@ -1023,7 +1023,7 @@ syntax keyword dPhobosType Xorshift160
 syntax keyword dPhobosType Xorshift192
 syntax keyword dPhobosType Xorshift
 syntax keyword dPhobosFunction unpredictableSeed
-syntax keyword dPhobosConstant Random
+syntax keyword dPhobosType Random
 syntax keyword dPhobosFunction rndGen
 syntax keyword dPhobosFunction uniform
 syntax keyword dPhobosFunction uniform01
