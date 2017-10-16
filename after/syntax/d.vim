@@ -3019,6 +3019,18 @@ syntax keyword dPhobosFunction keys
 syntax keyword dPhobosFunction byValue
 syntax keyword dPhobosFunction byKeyValue
 
+" Optional Highlighting, suggested by FraMecca
+if exists('g:d_optional_highlight')
+	syn match dOperator	"\(<<\|>>\|[-+*/%&^|<>!=]\)="
+	syn match dOperator	"<<\|>>\|&&\|||\|++\|--\|->"
+	syn match dOperator	"[.!~*&%<>^|=,+-]"
+	syn match dOperator	"/[^/*=]"me=e-1
+	syn match dOperator	"/$"
+	syn match dOperator 	"&&\|||"
+	syn match dOperator	"[][]^^"
+	hi def link dOperator	Operator
+endif
+
 " Default highlighting
 if version >= 508 || !exists("did_d_syntax_inits")
 	if version < 508
