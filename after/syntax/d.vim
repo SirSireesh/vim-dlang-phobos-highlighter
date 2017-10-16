@@ -3029,6 +3029,11 @@ if exists('g:d_optional_highlight')
 	syn match dOperator 	"&&\|||"
 	syn match dOperator	"[][]^^"
 	hi def link dOperator	Operator
+
+	syn match dDelimiter    "[();\\]"
+	syn match dBraces display "[{}]"
+	hi def link dBraces Delimiter
+	hi def link dDelimiter Delimiter
 endif
 
 " Default highlighting
