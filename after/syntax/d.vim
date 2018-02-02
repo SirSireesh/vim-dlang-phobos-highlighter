@@ -185,6 +185,7 @@ syntax keyword dPhobosFunction stripRight
 syntax keyword dPhobosFunction swap
 syntax keyword dPhobosFunction swapRanges
 syntax keyword dPhobosFunction uninitializedFill
+syntax keyword dPhobosFunction mean
 syntax keyword dPhobosBool OpenRight
 syntax keyword dPhobosBool SortOutput
 " std.array
@@ -254,6 +255,8 @@ syntax keyword dPhobosFunction ulongLength
 syntax keyword dPhobosFunction toDecimalString
 syntax keyword dPhobosFunction toHex
 syntax keyword dPhobosFunction absUnsign
+syntax keyword dPhobosFunction divMod
+syntax keyword dPhobosFunction getDigit
 " std.bitmanip
 syntax keyword dPhobosType FloatRep
 syntax keyword dPhobosType DoubleRep
@@ -1051,6 +1054,7 @@ syntax keyword dPhobosFunction indexed
 syntax keyword dPhobosFunction iota
 syntax keyword dPhobosFunction lockstep
 syntax keyword dPhobosType NullSink
+syntax keyword dPhobosFunction nullSink
 syntax keyword dPhobosFunction only
 syntax keyword dPhobosFunction padLeft
 syntax keyword dPhobosFunction padRight
@@ -1060,6 +1064,7 @@ syntax keyword dPhobosFunction retro
 syntax keyword dPhobosFunction roundRobin
 syntax keyword dPhobosFunction sequence
 syntax keyword dPhobosFunction stride
+syntax keyword dPhobosFunction slide
 syntax keyword dPhobosFunction tail
 syntax keyword dPhobosFunction take
 syntax keyword dPhobosFunction takeExactly
